@@ -1,0 +1,75 @@
+﻿Version=7.3
+NumberOfModules=1
+Module1=Starter
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=1
+File1=Layout1.bal
+NumberOfLibraries=2
+Library1=core
+Library2=webviewextras
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private Button1 As Button
+	Private wv As WebView
+	Private xtra As WebViewExtras
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("Layout1")
+	xtra.addJavascriptInterface(wv,"B4A")
+	'wv.loadUrl("file:///android_asset/beacons.html")
+	wv.LoadHtml("<html><script>function SMS(){window.location.href='tptiphone://ab/1/a';}</script><body  > or click <a href='tptiphone://teleportel/a/a'>SMS</a></body></html>")
+End Sub
+
+Sub Activity_Resume
+	'wv.loadUrl("file:///android_asset/beacons.html")
+	
+End Sub
+
+Sub Activity_Pause(UserClosed As Boolean)
+
+End Sub
+
+
+Sub Button1_Click
+	
+End Sub
+
+Sub wv_PageFinished(Url As String)
+	
+End Sub
+
+Sub wv_OverrideUrl(Url As String) As Boolean
+	Log($"wv_OverrideUrl(${Url})"$)
+	If Url.ToLowerCase.StartsWith("beka") Then
+		Dim Intent1 As Intent
+		Intent1.Initialize2(Url, 0)
+		StartActivity(Intent1)
+	End If
+End Sub

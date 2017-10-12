@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="de.fbdn.service"
+	android:versionCode="1"
+	android:versionName=""
+	android:installLocation="internalOnly">
+	
+	<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="14"/>
+	<supports-screens android:largeScreens="true" 
+	    android:normalScreens="true" 
+	    android:smallScreens="true" 
+	    android:anyDensity="true"/>
+	<application
+		android:icon="@drawable/icon"
+		android:label="BeKa Service">
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".main"
+			android:label="BeKa Service"
+			android:screenOrientation="unspecified">
+			<intent-filter>
+			   <action android:name="android.intent.action.MAIN" />
+			   <category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			
+			<intent-filter>
+			  <action android:name="android.intent.action.VIEW" />
+			  <category android:name="android.intent.category.DEFAULT" />
+			  <category android:name="android.intent.category.BROWSABLE" />
+			  <!-- Accepts URIs that begin with "beka://service” -->
+			  <data android:scheme="beka" android:host="service" />
+			</intent-filter>
+			<intent-filter>
+			  <action android:name="android.intent.action.VIEW" />
+			  <category android:name="android.intent.category.DEFAULT" />
+			  <category android:name="android.intent.category.BROWSABLE" />
+			  <!-- Accepts URIs that begin with "beka://kunden” -->
+			  <data android:scheme="beka" android:host="kunden" />
+			</intent-filter>
+			<intent-filter>
+			  <action android:name="android.intent.action.VIEW" />
+			  <category android:name="android.intent.category.DEFAULT" />
+			  <category android:name="android.intent.category.BROWSABLE" />
+			  <!-- Accepts URIs that begin with "beka://ab” -->
+			  <data android:scheme="beka" android:host="ab" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

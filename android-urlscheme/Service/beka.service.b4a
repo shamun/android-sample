@@ -1,0 +1,93 @@
+﻿Version=7.3
+NumberOfModules=0
+Build1=Default,de.fbdn.service
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~AddActivityText(Main, ~\n~<intent-filter>~\n~  <action android:name="android.intent.action.VIEW" />~\n~  <category android:name="android.intent.category.DEFAULT" />~\n~  <category android:name="android.intent.category.BROWSABLE" />~\n~  <!-- Accepts URIs that begin with "beka://service” -->~\n~  <data android:scheme="beka" android:host="service" />~\n~</intent-filter>~\n~<intent-filter>~\n~  <action android:name="android.intent.action.VIEW" />~\n~  <category android:name="android.intent.category.DEFAULT" />~\n~  <category android:name="android.intent.category.BROWSABLE" />~\n~  <!-- Accepts URIs that begin with "beka://kunden” -->~\n~  <data android:scheme="beka" android:host="kunden" />~\n~</intent-filter>~\n~<intent-filter>~\n~  <action android:name="android.intent.action.VIEW" />~\n~  <category android:name="android.intent.category.DEFAULT" />~\n~  <category android:name="android.intent.category.BROWSABLE" />~\n~  <!-- Accepts URIs that begin with "beka://ab” -->~\n~  <data android:scheme="beka" android:host="ab" />~\n~</intent-filter>~\n~)
+IconFile=
+NumberOfFiles=1
+File1=main.bal
+NumberOfLibraries=1
+Library1=core
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: BeKa Service
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Dim lastintent As Intent
+	Private lv As ListView
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	Activity.LoadLayout("main")
+	lastintent = Null
+End Sub
+
+Sub Activity_Resume
+	If Activity.GetStartingIntent = lastintent Then Return
+ 		'intent already handled
+	lv.Clear
+	Dim In As Intent 
+  In = Activity.GetStartingIntent 
+	lastintent = In
+	'Log("--- Intent")
+  'Log("Action: "&In.Action)
+	lv.AddSingleLine("--- Extras")
+  
+	lv.AddSingleLine(In.ExtrasToString)
+	lv.AddSingleLine("--- Data")
+	Log(In.GetData)
+	Dim data As String = In.GetData
+	If data <> Null Then
+		If data.Contains("beka") Then
+    	data = data.SubString(7)
+		End If
+	End If
+
+	'data = data.re Replace("beka:|/|/","")
+	lv.AddSingleLine("data="&data)
+	If data <> Null Then
+		Dim values As List
+		values.Initialize
+		values = Regex.Split("\/", data)	
+		If values.Size > 0 Then
+			For i = 0 To values.Size-1 
+				lv.AddSingleLine(values.Get(i))
+			Next
+		End If
+	End If
+	If In.ExtrasToString.Contains("no extras") Then
+    'No Data
+	End If
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+
+Sub lv_ItemClick (Position As Int, Value As Object)
+	
+End Sub
+Sub lv_ItemLongClick (Position As Int, Value As Object)
+	
+End Sub

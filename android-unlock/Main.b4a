@@ -1,0 +1,68 @@
+﻿Version=7.3
+NumberOfModules=2
+Module1=Starter
+Module2=myService
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=1
+File1=1.bal
+NumberOfLibraries=3
+Library1=core
+Library2=phone
+Library3=reflection
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+End Sub
+
+Sub Globals
+	Dim Button1 As Button
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("1")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+	If UserClosed Then
+		Log(">>> OFF - Forefront")
+		myService.FOREFRONT_STATE = False
+	End If
+End Sub
+
+Sub SetShowWhenLocked
+	Dim r As Reflector
+	r.Target = r.GetActivity
+	r.Target = r.RunMethod("getWindow")
+	r.RunMethod2("addFlags", 6815872, "java.lang.int")
+	Log(">>> ON - Forefront")
+End Sub
+
+Sub Button1_Click
+	StartServiceAt(myService, DateTime.Now+20*1000,True)
+	Button1.Enabled = False
+End Sub
+
+Sub Button2_Click	
+	StopService(myService)	
+	Activity.Finish
+	ExitApplication
+End Sub
