@@ -61,3 +61,13 @@ End Sub
 Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
+
+Sub ListView1_ItemClick (Position As Int, Value As Object)
+	Msgbox(Value,value)
+	
+End Sub
+
+
+Sub ListView1_ItemLongClick (Position As Int, Value As Object)
+	
+End Sub
