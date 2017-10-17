@@ -1,0 +1,71 @@
+﻿Version=1.00
+IconFile=
+FullScreen=False
+IncludeTitle=True
+NumberOfModules=0
+Package=anywheresoftware.b4a.agraham.byteconverter
+Label=ByteConverter Demo
+VersionCode=1
+VersionString=
+Orientation=portrait
+NumberOfFiles=1
+File1=Layout.bal
+NumberOfLibraries=2
+Library1=byteconverter
+Library2=core
+@EndOfDesignText@
+'Activity module
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim Conv As ByteConverter
+	Dim Dbls(0) As Double
+	Dim Ints(0) As Int
+	Dim Bytes(0) As Byte
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Dim Button1 As Button
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Layout")
+
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+Sub Button1_Click
+	Dim msg As String
+	Dbls = Array As Double(1,234, 5.678)
+	Ints = Array As Int(1, -2, 3, -4)
+	Conv.LittleEndian = False
+	Bytes = Conv.IntsToBytes(Ints)
+	msg = Conv.HexFromBytes(Bytes) & CRLF
+	Conv.LittleEndian = True
+	Bytes = Conv.IntsToBytes(Ints)
+	msg = msg & Conv.HexFromBytes(Bytes) & CRLF
+	Msgbox(msg, "Bytes from Ints")	
+	Ints = Conv.IntsFromBytes(Conv.IntsToBytes(Ints))
+	Msgbox( Ints(0) & " " & Ints(1) & " " & Ints(2) & " " &Ints(3), "")
+	
+	msg = "0123456789abcdef"
+	Msgbox(msg, "HexToBytes")
+	Bytes = Conv.HexToBytes(msg)
+	Msgbox(Conv.HexFromBytes(Bytes), "HexFromBytes")
+	
+	
+	
+	
+End Sub
+
