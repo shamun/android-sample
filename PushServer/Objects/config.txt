@@ -1,0 +1,18 @@
+#push server configuration
+#http://192.168.1.32:51044/send?password=123&text=Message
+#path to the keystore file. Use unix style slashes:
+iPushKeystore=C:/Users/tpt/Desktop/B4I/push.keystore
+#same password as the password set in B4i key settings:
+iPushKeystorePassword=<IDE PASSWORD>
+
+#change to: gateway.push.apple.com for production
+iGateway=gateway.sandbox.push.apple.com
+iGateWayPort=2195
+#change to: feedback.push.apple.com for production
+iFeedback=feedback.sandbox.push.apple.com
+iFeedbackPort=2196
+
+AndroidApiKey=AIzaSyAccccccm4KHlrD7CfgRuo
+
+PushServerPort=51044
+PushServerPassword=123
