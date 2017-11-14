@@ -3,7 +3,7 @@
 #path to the keystore file. Use unix style slashes:
 iPushKeystore=C:/Users/tpt/Desktop/B4I/push.keystore
 #same password as the password set in B4i key settings:
-iPushKeystorePassword=<IDE PASSWORD>
+iPushKeystorePassword=x1032171
 
 #change to: gateway.push.apple.com for production
 iGateway=gateway.sandbox.push.apple.com

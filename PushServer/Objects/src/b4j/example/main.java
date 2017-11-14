@@ -9,10 +9,10 @@ public static main mostCurrent = new main();
 
 public static BA ba;
 static {
-		ba = new  anywheresoftware.b4a.ShellBA("b4j.example", "b4j.example.main", null);
+		ba = new  anywheresoftware.b4a.StandardBA("b4j.example", "b4j.example.main", null);
 		ba.loadHtSubs(main.class);
         if (ba.getClass().getName().endsWith("ShellBA")) {
-			anywheresoftware.b4a.ShellBA.delegateBA = new anywheresoftware.b4a.StandardBA("b4j.example", null, null);
+			
 			ba.raiseEvent2(null, true, "SHELL", false);
 			ba.raiseEvent2(null, true, "CREATE", true, "b4j.example.main", ba);
 		}
@@ -34,20 +34,7 @@ static {
             anywheresoftware.b4a.keywords.Common.LogDebug("Program terminated (StartMessageLoop was not called).");
         }
     }
-
-
-private static boolean processGlobalsRun;
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}public static anywheresoftware.b4a.keywords.Common __c = null;
+public static anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4j.objects.SQL _db = null;
 public static int _type_ios = 0;
 public static int _type_android = 0;
@@ -61,47 +48,31 @@ public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
 public static b4j.example.dbutils _dbutils = null;
 public static String  _appstart(String[] _args) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(ba, "appstart"))
-	return (String) Debug.delegate(ba, "appstart", new Object[] {_args});
 String[] _row = null;
-RDebugUtils.currentLine=65536;
- //BA.debugLineNum = 65536;BA.debugLine="Sub AppStart (Args() As String)";
-RDebugUtils.currentLine=65538;
- //BA.debugLineNum = 65538;BA.debugLine="config = File.ReadMap(File.DirApp, \"config.txt\")";
+ //BA.debugLineNum = 17;BA.debugLine="Sub AppStart (Args() As String)";
+ //BA.debugLineNum = 19;BA.debugLine="config = File.ReadMap(File.DirApp, \"config.txt\")";
 _config = anywheresoftware.b4a.keywords.Common.File.ReadMap(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"config.txt");
-RDebugUtils.currentLine=65539;
- //BA.debugLineNum = 65539;BA.debugLine="InitDB";
+ //BA.debugLineNum = 20;BA.debugLine="InitDB";
 _initdb();
-RDebugUtils.currentLine=65540;
- //BA.debugLineNum = 65540;BA.debugLine="srvr.Initialize(\"srvr\")";
+ //BA.debugLineNum = 21;BA.debugLine="srvr.Initialize(\"srvr\")";
 _srvr.Initialize(ba,"srvr");
-RDebugUtils.currentLine=65541;
- //BA.debugLineNum = 65541;BA.debugLine="srvr.Port = config.Get(\"PushServerPort\")";
+ //BA.debugLineNum = 22;BA.debugLine="srvr.Port = config.Get(\"PushServerPort\")";
 _srvr.setPort((int)(BA.ObjectToNumber(_config.Get((Object)("PushServerPort")))));
-RDebugUtils.currentLine=65542;
- //BA.debugLineNum = 65542;BA.debugLine="srvr.AddHandler(\"/devicetoken\", \"DeviceToken\", Fa";
+ //BA.debugLineNum = 23;BA.debugLine="srvr.AddHandler(\"/devicetoken\", \"DeviceToken\", Fa";
 _srvr.AddHandler("/devicetoken","DeviceToken",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=65543;
- //BA.debugLineNum = 65543;BA.debugLine="srvr.AddHandler(\"/send\", \"Send\", False)";
+ //BA.debugLineNum = 24;BA.debugLine="srvr.AddHandler(\"/send\", \"Send\", False)";
 _srvr.AddHandler("/send","Send",anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=65544;
- //BA.debugLineNum = 65544;BA.debugLine="srvr.Start";
+ //BA.debugLineNum = 25;BA.debugLine="srvr.Start";
 _srvr.Start();
-RDebugUtils.currentLine=65545;
- //BA.debugLineNum = 65545;BA.debugLine="Log(\"server version: \" & version)";
+ //BA.debugLineNum = 26;BA.debugLine="Log(\"server version: \" & version)";
 anywheresoftware.b4a.keywords.Common.Log("server version: "+_version);
-RDebugUtils.currentLine=65546;
- //BA.debugLineNum = 65546;BA.debugLine="Log(\"server is listening on port: \" & srvr.Port)";
+ //BA.debugLineNum = 27;BA.debugLine="Log(\"server is listening on port: \" & srvr.Port)";
 anywheresoftware.b4a.keywords.Common.Log("server is listening on port: "+BA.NumberToString(_srvr.getPort()));
-RDebugUtils.currentLine=65547;
- //BA.debugLineNum = 65547;BA.debugLine="iOSPush.Start 'comment these two lines to disable";
+ //BA.debugLineNum = 28;BA.debugLine="iOSPush.Start 'comment these two lines to disable";
 _iospush._start();
-RDebugUtils.currentLine=65548;
- //BA.debugLineNum = 65548;BA.debugLine="iOSFeedback.Start";
+ //BA.debugLineNum = 29;BA.debugLine="iOSFeedback.Start";
 _iosfeedback._start();
-RDebugUtils.currentLine=65549;
- //BA.debugLineNum = 65549;BA.debugLine="For Each row() As String In DBUtils.ExecuteMemory";
+ //BA.debugLineNum = 30;BA.debugLine="For Each row() As String In DBUtils.ExecuteMemory";
 {
 final anywheresoftware.b4a.BA.IterableList group12 = _dbutils._executememorytable(_db,"SELECT name FROM sqlite_master WHERE type='table'",(String[])(anywheresoftware.b4a.keywords.Common.Null),(int) (0));
 final int groupLen12 = group12.getSize()
@@ -109,46 +80,67 @@ final int groupLen12 = group12.getSize()
 ;
 for (; index12 < groupLen12;index12++){
 _row = (String[])(group12.Get(index12));
-RDebugUtils.currentLine=65550;
- //BA.debugLineNum = 65550;BA.debugLine="Log($\"Table: ${row(0)}\"$)";
+ //BA.debugLineNum = 31;BA.debugLine="Log($\"Table: ${row(0)}\"$)";
 anywheresoftware.b4a.keywords.Common.Log(("Table: "+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_row[(int) (0)]))+""));
  }
 };
-RDebugUtils.currentLine=65552;
- //BA.debugLineNum = 65552;BA.debugLine="StartMessageLoop";
+ //BA.debugLineNum = 33;BA.debugLine="StartMessageLoop";
 anywheresoftware.b4a.keywords.Common.StartMessageLoop(ba);
-RDebugUtils.currentLine=65553;
- //BA.debugLineNum = 65553;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="End Sub";
 return "";
 }
 public static String  _initdb() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(ba, "initdb"))
-	return (String) Debug.delegate(ba, "initdb", null);
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Private Sub InitDB";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="If File.Exists(File.DirApp, \"push.db\") = False Th";
+ //BA.debugLineNum = 36;BA.debugLine="Private Sub InitDB";
+ //BA.debugLineNum = 37;BA.debugLine="If File.Exists(File.DirApp, \"push.db\") = False Th";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db")==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="Log(\"Creating new database.\")";
+ //BA.debugLineNum = 38;BA.debugLine="Log(\"Creating new database.\")";
 anywheresoftware.b4a.keywords.Common.Log("Creating new database.");
-RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
+ //BA.debugLineNum = 39;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
 _db.InitializeSQLite(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=131076;
- //BA.debugLineNum = 131076;BA.debugLine="db.ExecNonQuery(\"PRAGMA journal_mode = wal\")";
+ //BA.debugLineNum = 40;BA.debugLine="db.ExecNonQuery(\"PRAGMA journal_mode = wal\")";
 _db.ExecNonQuery("PRAGMA journal_mode = wal");
-RDebugUtils.currentLine=131077;
- //BA.debugLineNum = 131077;BA.debugLine="DBUtils.CreateTable(db, \"tokens\", _ 			CreateMap";
+ //BA.debugLineNum = 41;BA.debugLine="DBUtils.CreateTable(db, \"tokens\", _ 			CreateMap";
 _dbutils._createtable(_db,"tokens",anywheresoftware.b4a.keywords.Common.createMap(new Object[] {(Object)("token"),(Object)(_dbutils._db_text),(Object)("type"),(Object)(_dbutils._db_integer),(Object)("updated_time"),(Object)(_dbutils._db_integer)}),"token");
  }else {
-RDebugUtils.currentLine=131081;
- //BA.debugLineNum = 131081;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
+ //BA.debugLineNum = 45;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
 _db.InitializeSQLite(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db",anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=131083;
- //BA.debugLineNum = 131083;BA.debugLine="End Sub";
+ //BA.debugLineNum = 47;BA.debugLine="End Sub";
+return "";
+}
+
+private static boolean processGlobalsRun;
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+iosfeedback._process_globals();
+iospush._process_globals();
+httputils2service._process_globals();
+webutils._process_globals();
+androidpush._process_globals();
+dbutils._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 9;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="Public db As SQL";
+_db = new anywheresoftware.b4j.objects.SQL();
+ //BA.debugLineNum = 11;BA.debugLine="Public Const TYPE_IOS = 1, TYPE_ANDROID = 2 As In";
+_type_ios = (int) (1);
+_type_android = (int) (2);
+ //BA.debugLineNum = 12;BA.debugLine="Public srvr As Server";
+_srvr = new anywheresoftware.b4j.object.ServerWrapper();
+ //BA.debugLineNum = 13;BA.debugLine="Public config As Map";
+_config = new anywheresoftware.b4a.objects.collections.Map();
+ //BA.debugLineNum = 14;BA.debugLine="Private Const version As String = \"0.97\"";
+_version = "0.97";
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -374,19 +374,37 @@ int _i = 0;
 RDebugUtils.currentLine=131072;
  //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
 RDebugUtils.currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="For i = 1 To 100";
-{
-final int step1 = 1;
-final int limit1 = (int) (100);
-_i = (int) (1) ;
-for (;(step1 > 0 && _i <= limit1) || (step1 < 0 && _i >= limit1) ;_i = ((int)(0 + _i + step1))  ) {
+ //BA.debugLineNum = 131074;BA.debugLine="Activity.LoadLayout(\"1\")";
+mostCurrent._activity.LoadLayout("1",mostCurrent.activityBA);
 RDebugUtils.currentLine=131075;
- //BA.debugLineNum = 131075;BA.debugLine="ListView1.AddSingleLine(cs.Initialize.Color(Rnd(";
-mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._cs.Initialize().Color(anywheresoftware.b4a.keywords.Common.Rnd((int) (0xff000000),(int) (-1))).Alignment(BA.getEnumFromString(android.text.Layout.Alignment.class,"ALIGN_CENTER")).Append(BA.ObjectToCharSequence("Hellow")).PopAll().getObject()));
+ //BA.debugLineNum = 131075;BA.debugLine="clv1.AddTextItem(\"Aaaa\", \"a\")";
+mostCurrent._clv1._addtextitem((Object)("Aaaa"),(Object)("a"));
+RDebugUtils.currentLine=131076;
+ //BA.debugLineNum = 131076;BA.debugLine="clv1.AddTextItem(\"Aaaa\" & CRLF & \"Bbbb\", \"b\")";
+mostCurrent._clv1._addtextitem((Object)("Aaaa"+anywheresoftware.b4a.keywords.Common.CRLF+"Bbbb"),(Object)("b"));
+RDebugUtils.currentLine=131077;
+ //BA.debugLineNum = 131077;BA.debugLine="clv1.AddTextItem(\"Aaaa\" & CRLF & \"Bbbb\" & CRLF &";
+mostCurrent._clv1._addtextitem((Object)("Aaaa"+anywheresoftware.b4a.keywords.Common.CRLF+"Bbbb"+anywheresoftware.b4a.keywords.Common.CRLF+"Cccc"),(Object)("c"));
+RDebugUtils.currentLine=131078;
+ //BA.debugLineNum = 131078;BA.debugLine="clv1.AddTextItem(\"Aaaa\" & CRLF & \"Bbbb\" & CRLF &";
+mostCurrent._clv1._addtextitem((Object)("Aaaa"+anywheresoftware.b4a.keywords.Common.CRLF+"Bbbb"+anywheresoftware.b4a.keywords.Common.CRLF+"Cccc"+anywheresoftware.b4a.keywords.Common.CRLF+"Dddd"),(Object)("d"));
+RDebugUtils.currentLine=131079;
+ //BA.debugLineNum = 131079;BA.debugLine="clv1.AddTextItem(\"Aaaa\" & CRLF & \"Bbbb\" & CRLF &";
+mostCurrent._clv1._addtextitem((Object)("Aaaa"+anywheresoftware.b4a.keywords.Common.CRLF+"Bbbb"+anywheresoftware.b4a.keywords.Common.CRLF+"Cccc"+anywheresoftware.b4a.keywords.Common.CRLF+"Dddd"+anywheresoftware.b4a.keywords.Common.CRLF+"Eeee"),(Object)("e"));
+RDebugUtils.currentLine=131081;
+ //BA.debugLineNum = 131081;BA.debugLine="For i = 1 To 100";
+{
+final int step7 = 1;
+final int limit7 = (int) (100);
+_i = (int) (1) ;
+for (;(step7 > 0 && _i <= limit7) || (step7 < 0 && _i >= limit7) ;_i = ((int)(0 + _i + step7))  ) {
+RDebugUtils.currentLine=131082;
+ //BA.debugLineNum = 131082;BA.debugLine="ListView1.AddSingleLine(cs.Initialize.Color(Rnd(";
+mostCurrent._listview1.AddSingleLine(BA.ObjectToCharSequence(mostCurrent._cs.Initialize().Color(anywheresoftware.b4a.keywords.Common.Rnd((int) (0xff000000),(int) (-1))).Alignment(BA.getEnumFromString(android.text.Layout.Alignment.class,"ALIGN_CENTER")).Append(BA.ObjectToCharSequence(("Item #"+anywheresoftware.b4a.keywords.Common.SmartStringFormatter("",(Object)(_i))+""))).PopAll().getObject()));
  }
 };
-RDebugUtils.currentLine=131077;
- //BA.debugLineNum = 131077;BA.debugLine="End Sub";
+RDebugUtils.currentLine=131084;
+ //BA.debugLineNum = 131084;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
@@ -405,6 +423,29 @@ RDebugUtils.currentLine=196608;
  //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
 RDebugUtils.currentLine=196610;
  //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+return "";
+}
+public static String  _listview1_itemclick(int _position,Object _value) throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "listview1_itemclick"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "listview1_itemclick", new Object[] {_position,_value});
+RDebugUtils.currentLine=327680;
+ //BA.debugLineNum = 327680;BA.debugLine="Sub ListView1_ItemClick (Position As Int, Value As";
+RDebugUtils.currentLine=327681;
+ //BA.debugLineNum = 327681;BA.debugLine="Msgbox(Value,Value)";
+anywheresoftware.b4a.keywords.Common.Msgbox(BA.ObjectToCharSequence(_value),BA.ObjectToCharSequence(_value),mostCurrent.activityBA);
+RDebugUtils.currentLine=327683;
+ //BA.debugLineNum = 327683;BA.debugLine="End Sub";
+return "";
+}
+public static String  _listview1_itemlongclick(int _position,Object _value) throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "listview1_itemlongclick"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "listview1_itemlongclick", new Object[] {_position,_value});
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Sub ListView1_ItemLongClick (Position As Int, Valu";
+RDebugUtils.currentLine=393218;
+ //BA.debugLineNum = 393218;BA.debugLine="End Sub";
 return "";
 }
 }
