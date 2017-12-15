@@ -1,5 +1,0 @@
-192.168.1.32 - - [17/Oct/2017:10:07:40 +0000] "GET / HTTP/1.1" 404 315 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.32 - - [17/Oct/2017:10:07:40 +0000] "GET /favicon.ico HTTP/1.1" 404 326 "http://192.168.1.32:51044/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.32 - - [17/Oct/2017:10:09:04 +0000] "GET /send?password=x1032171&text=Message HTTP/1.1" 500 333 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.32 - - [17/Oct/2017:10:09:26 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.32 - - [17/Oct/2017:10:10:01 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
