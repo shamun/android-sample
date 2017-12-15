@@ -2,31 +2,31 @@ org.tpt.push
 0
 1
 httpjob
-main,application_background,0,0,64,66
+main,application_background,0,0,73,75
 
 
 
-main,application_pushtoken,0,0,33,42
+main,application_pushtoken,0,0,42,51
 ,serverurl
 
 httpjob,initialize,httpjob,poststring,httpjob,postbytes
-main,application_remotenotification,0,0,53,58
+main,application_remotenotification,0,0,62,67
 
 
 
-main,application_start,0,0,23,31
+main,application_start,0,0,32,40
 ,navcontrol,,page1,,app
 ,navcontrol
 
-main,jobdone,0,0,44,51
+main,jobdone,0,0,53,60
 
 
 httpjob,release
-main,page1_resize,0,0,60,62
+main,page1_resize,0,0,69,71
 
 
 
-main,process_globals,0,1,14,21
+main,process_globals,0,1,18,30
 ,serverurl
 ,serverurl
 

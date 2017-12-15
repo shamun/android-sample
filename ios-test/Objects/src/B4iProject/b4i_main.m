@@ -15,7 +15,7 @@
     return shared;
 }
 - (int)debugAppId {
-    return 29;
+    return 42;
 }
 
 
@@ -23,23 +23,23 @@
 [B4IRDebugUtils shared].currentModule=@"main";
 if ([B4IDebug shouldDelegate: @"application_background"])
 	return ((NSString*) [B4IDebug delegate:self.bi :@"application_background" :nil]);
-[B4IRDebugUtils shared].currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Private Sub Application_Background";
-[B4IRDebugUtils shared].currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+[B4IRDebugUtils shared].currentLine=327680;
+ //BA.debugLineNum = 327680;BA.debugLine="Private Sub Application_Background";
+[B4IRDebugUtils shared].currentLine=327682;
+ //BA.debugLineNum = 327682;BA.debugLine="End Sub";
 return @"";
 }
 - (NSString*)  _application_receivelocalnotification:(B4INotificationWrapper*) _ln{
 [B4IRDebugUtils shared].currentModule=@"main";
 if ([B4IDebug shouldDelegate: @"application_receivelocalnotification"])
 	return ((NSString*) [B4IDebug delegate:self.bi :@"application_receivelocalnotification:" :@[[B4I nilToNSNull:_ln]]]);
-[B4IRDebugUtils shared].currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Sub Application_ReceiveLocalNotification (LN As No";
-[B4IRDebugUtils shared].currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="hd.ToastMessageShow(\"Notification arrived: \" & LN";
+[B4IRDebugUtils shared].currentLine=196608;
+ //BA.debugLineNum = 196608;BA.debugLine="Sub Application_ReceiveLocalNotification (LN As No";
+[B4IRDebugUtils shared].currentLine=196610;
+ //BA.debugLineNum = 196610;BA.debugLine="hd.ToastMessageShow(\"Notification arrived: \" & LN";
 [self._hd ToastMessageShow:[@[@"Notification arrived: ",[_ln AlertBody]] componentsJoinedByString:@""] :[self.__c True]];
-[B4IRDebugUtils shared].currentLine=327683;
- //BA.debugLineNum = 327683;BA.debugLine="End Sub";
+[B4IRDebugUtils shared].currentLine=196611;
+ //BA.debugLineNum = 196611;BA.debugLine="End Sub";
 return @"";
 }
 - (NSString*)  _application_start:(B4INavigationControllerWrapper*) _nav{
@@ -97,41 +97,41 @@ return @"";
 if ([B4IDebug shouldDelegate: @"btnnotification_click"])
 	return ((NSString*) [B4IDebug delegate:self.bi :@"btnnotification_click" :nil]);
 B4INotificationWrapper* _ln = nil;
-[B4IRDebugUtils shared].currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub btnNotification_Click";
-[B4IRDebugUtils shared].currentLine=262145;
- //BA.debugLineNum = 262145;BA.debugLine="Dim ln As Notification";
+[B4IRDebugUtils shared].currentLine=131072;
+ //BA.debugLineNum = 131072;BA.debugLine="Sub btnNotification_Click";
+[B4IRDebugUtils shared].currentLine=131073;
+ //BA.debugLineNum = 131073;BA.debugLine="Dim ln As Notification";
 _ln = [B4INotificationWrapper new];
-[B4IRDebugUtils shared].currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="ln.Initialize(DateTime.Now + 6 * DateTime.TicksPe";
+[B4IRDebugUtils shared].currentLine=131074;
+ //BA.debugLineNum = 131074;BA.debugLine="ln.Initialize(DateTime.Now + 6 * DateTime.TicksPe";
 [_ln Initialize:(long long) ([[self.__c DateTime] Now]+6*[[self.__c DateTime] TicksPerSecond])];
-[B4IRDebugUtils shared].currentLine=262147;
- //BA.debugLineNum = 262147;BA.debugLine="ln.IconBadgeNumber = 1";
+[B4IRDebugUtils shared].currentLine=131075;
+ //BA.debugLineNum = 131075;BA.debugLine="ln.IconBadgeNumber = 1";
 [_ln setIconBadgeNumber:(int) (1)];
-[B4IRDebugUtils shared].currentLine=262148;
- //BA.debugLineNum = 262148;BA.debugLine="ln.AlertBody = \"Moo is hungry\"";
+[B4IRDebugUtils shared].currentLine=131076;
+ //BA.debugLineNum = 131076;BA.debugLine="ln.AlertBody = \"Moo is hungry\"";
 [_ln setAlertBody:@"Moo is hungry"];
-[B4IRDebugUtils shared].currentLine=262149;
- //BA.debugLineNum = 262149;BA.debugLine="ln.PlaySound = True";
+[B4IRDebugUtils shared].currentLine=131077;
+ //BA.debugLineNum = 131077;BA.debugLine="ln.PlaySound = True";
 [_ln setPlaySound:[self.__c True]];
-[B4IRDebugUtils shared].currentLine=262150;
- //BA.debugLineNum = 262150;BA.debugLine="ln.Register";
+[B4IRDebugUtils shared].currentLine=131078;
+ //BA.debugLineNum = 131078;BA.debugLine="ln.Register";
 [_ln Register];
-[B4IRDebugUtils shared].currentLine=262151;
- //BA.debugLineNum = 262151;BA.debugLine="hd.ToastMessageShow(\"Notification will fire in 6";
+[B4IRDebugUtils shared].currentLine=131079;
+ //BA.debugLineNum = 131079;BA.debugLine="hd.ToastMessageShow(\"Notification will fire in 6";
 [self._hd ToastMessageShow:@"Notification will fire in 6 seconds." :[self.__c False]];
-[B4IRDebugUtils shared].currentLine=262152;
- //BA.debugLineNum = 262152;BA.debugLine="End Sub";
+[B4IRDebugUtils shared].currentLine=131080;
+ //BA.debugLineNum = 131080;BA.debugLine="End Sub";
 return @"";
 }
 - (NSString*)  _page1_resize:(int) _width :(int) _height{
 [B4IRDebugUtils shared].currentModule=@"main";
 if ([B4IDebug shouldDelegate: @"page1_resize"])
 	return ((NSString*) [B4IDebug delegate:self.bi :@"page1_resize::" :@[@(_width),@(_height)]]);
-[B4IRDebugUtils shared].currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Private Sub Page1_Resize(Width As Int, Height As I";
-[B4IRDebugUtils shared].currentLine=131074;
- //BA.debugLineNum = 131074;BA.debugLine="End Sub";
+[B4IRDebugUtils shared].currentLine=262144;
+ //BA.debugLineNum = 262144;BA.debugLine="Private Sub Page1_Resize(Width As Int, Height As I";
+[B4IRDebugUtils shared].currentLine=262146;
+ //BA.debugLineNum = 262146;BA.debugLine="End Sub";
 return @"";
 }
 

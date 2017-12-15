@@ -156,6 +156,7 @@ finally {
 			Debug.PopSubsStack();
 		}}
 public static RemoteObject  _process_globals() throws Exception{
+b4i_main._httputils2service=RemoteObject.createNew ("b4i_httputils2service");
  //BA.debugLineNum = 10;BA.debugLine="Sub Process_Globals";
  //BA.debugLineNum = 13;BA.debugLine="Public App As Application";
 b4i_main._app = RemoteObject.createNew ("B4IApplicationWrapper");

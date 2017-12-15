@@ -1,0 +1,79 @@
+﻿Version=5.9
+AppType=StandardJava
+NumberOfModules=9
+Module1=Send
+Module2=DeviceToken
+Module3=DBUtils
+Module4=iOSFeedback
+Module5=iOSPush
+Module6=HttpJob
+Module7=HttpUtils2Service
+Module8=WebUtils
+Module9=AndroidPush
+Build1=Default,b4j.example
+NumberOfFiles=0
+NumberOfLibraries=9
+Library1=jcore
+Library2=jsql
+Library3=jserver
+Library4=jrandomaccessfile
+Library5=jnetwork
+Library6=json
+Library7=jstringutils
+Library8=okhttp
+Library9=byteconverter
+@EndOfDesignText@
+'Non-UI application (console / server application)
+#Region  Project Attributes 
+	#CommandLineArgs:
+	#MergeLibraries: True 
+	#AdditionalJar: sqlite-jdbc-3.7.2
+
+#End Region
+
+Sub Process_Globals
+	Public db As SQL
+	Public Const TYPE_IOS = 1, TYPE_ANDROID = 2 As Int
+	Public srvr As Server
+	Public config As Map
+	Private Const version As String = "0.97"
+End Sub
+
+Sub AppStart (Args() As String)
+	'SetSystemProperty("javax.net.debug", "ssl")
+	config = File.ReadMap(File.DirApp, "config.txt")
+	InitDB
+	srvr.Initialize("srvr")
+	srvr.Port = config.Get("PushServerPort")
+	srvr.AddHandler("/devicetoken", "DeviceToken", False)
+	srvr.AddHandler("/send", "Send", False)
+	srvr.Start
+	Log("server version: " & version)
+	Log("server is listening on port: " & srvr.Port)
+	iOSPush.Start 'comment these two lines to disable iOS notifications
+	iOSFeedback.Start
+	For Each row() As String In DBUtils.ExecuteMemoryTable(db, "SELECT name FROM sqlite_master WHERE type='table'", Null, 0)
+		Log($"Table: ${row(0)}"$)
+	Next
+	StartMessageLoop
+End Sub
+
+Private Sub InitDB
+	If File.Exists(File.DirApp, "push.db") = False Then
+		Log("Creating new database.")
+		db.InitializeSQLite(File.DirApp, "push.db", True)
+		db.ExecNonQuery("PRAGMA journal_mode = wal")
+		DBUtils.CreateTable(db, "tokens", _
+			CreateMap("token": DBUtils.DB_TEXT, _
+					  "type": DBUtils.DB_INTEGER, _
+					  "updated_time": DBUtils.DB_INTEGER, _
+					  "userid":DBUtils.DB_TEXT, _
+					  "username": DBUtils.DB_TEXT _
+					 ), _
+					  "token")
+	Else
+		db.InitializeSQLite(File.DirApp, "push.db", True)
+	End If
+End Sub
+
+

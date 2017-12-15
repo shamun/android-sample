@@ -17,7 +17,7 @@
     return shared;
 }
 - (int)debugAppId {
-    return 1;
+    return 16;
 }
 
 
@@ -164,20 +164,20 @@ if ([B4IDebug shouldDelegate: @"process_globals"])
 	return ((NSString*) [B4IDebug delegate:self.bi :@"process_globals" :nil]);
 [B4IRDebugUtils shared].currentLine=0;
  //BA.debugLineNum = 0;BA.debugLine="Sub Process_Globals";
-[B4IRDebugUtils shared].currentLine=3;
- //BA.debugLineNum = 3;BA.debugLine="Public App As Application";
+[B4IRDebugUtils shared].currentLine=2;
+ //BA.debugLineNum = 2;BA.debugLine="Public App As Application";
 self._app = [B4IApplicationWrapper new];
-[B4IRDebugUtils shared].currentLine=4;
- //BA.debugLineNum = 4;BA.debugLine="Public NavControl As NavigationController";
+[B4IRDebugUtils shared].currentLine=3;
+ //BA.debugLineNum = 3;BA.debugLine="Public NavControl As NavigationController";
 self._navcontrol = [B4INavigationControllerWrapper new];
-[B4IRDebugUtils shared].currentLine=5;
- //BA.debugLineNum = 5;BA.debugLine="Private Page1 As Page";
+[B4IRDebugUtils shared].currentLine=4;
+ //BA.debugLineNum = 4;BA.debugLine="Private Page1 As Page";
 self._page1 = [B4IPage new];
-[B4IRDebugUtils shared].currentLine=6;
- //BA.debugLineNum = 6;BA.debugLine="Private Const ServerUrl As String = \"http://192.1";
+[B4IRDebugUtils shared].currentLine=8;
+ //BA.debugLineNum = 8;BA.debugLine="Private Const ServerUrl As String = \"http://192.1";
 self._serverurl = @"http://192.168.1.32:51044";
-[B4IRDebugUtils shared].currentLine=7;
- //BA.debugLineNum = 7;BA.debugLine="End Sub";
+[B4IRDebugUtils shared].currentLine=12;
+ //BA.debugLineNum = 12;BA.debugLine="End Sub";
 return @"";
 }
 @end

@@ -1,18 +1,24 @@
-﻿Version=4.3
+﻿Version=4.4
 NumberOfModules=2
 Module1=HttpJob
 Module2=HttpUtils2Service
 Build1=Default,org.tpt.push
-NumberOfFiles=0
+NumberOfFiles=2
+File1=1.bil
+File2=2.bil
 NumberOfLibraries=4
 Library1=icore
 Library2=ihttp
 Library3=irandomaccessfile
 Library4=istringutils
 @EndOfDesignText@
+' Step 1: OSX run the B4iBuildServer.jar
+' Step 2: iOS Phone run the B4iBridge
+' Step 3: Windows PC or Linux 
+
 'Code module
 #Region  Project Attributes 
-	#ApplicationLabel: B4i Example
+	#ApplicationLabel: B4i Pushclient
 	#Version: 1.0.0 
 	'Orientation possible values: Portrait, LandscapeLeft, LandscapeRight and PortraitUpsideDown
 	#iPhoneOrientations: Portrait, LandscapeLeft, LandscapeRight
@@ -24,12 +30,17 @@ Library4=istringutils
 #End Region
 
 Sub Process_Globals
-	'These global variables will be declared once when the application starts.
-	'Public variables can be accessed from all modules.
+
 	Public App As Application
 	Public NavControl As NavigationController
 	Private Page1 As Page
+	
+	' Local host : Windows PC
+	' Run PushServer
 	Private Const ServerUrl As String = "http://192.168.1.32:51044"
+	
+	' To receive notification
+	'http://192.168.1.32:51044/send?password=123&text=iamfrom_browser
 End Sub
 
 Private Sub Application_Start (Nav As NavigationController)

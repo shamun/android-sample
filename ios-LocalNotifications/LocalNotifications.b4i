@@ -1,5 +1,4 @@
-﻿Version=0.1
-IconFile=
+﻿Version=4.4
 NumberOfModules=0
 Build1=Default,anywheresoftware.b4i.example2
 NumberOfFiles=1
@@ -10,7 +9,7 @@ Library2=ihud
 @EndOfDesignText@
 'Code module
 #Region  Project Attributes 
-	#ApplicationLabel: B4i Example
+	#ApplicationLabel: B4i LocalNotifications
 	#Version: 1.0.0 
 	'Orientation possible values: Portrait, LandscapeLeft, LandscapeRight and PortraitUpsideDown
 	#iPhoneOrientations: Portrait, LandscapeLeft, LandscapeRight

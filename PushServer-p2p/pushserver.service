@@ -1,0 +1,10 @@
+[Unit]
+Description=PushServerV2.0
+After=syslog.target network.target
+
+[Service]
+ExecStart=/usr/bin/java -jar /home/www/html/b4a-notification-route/PushServer/Objects/PushServer.jar
+
+[Install]
+WantedBy=multi-user.target
+
