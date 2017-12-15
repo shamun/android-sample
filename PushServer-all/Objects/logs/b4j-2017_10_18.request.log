@@ -1,6 +1,0 @@
-192.168.1.32 - - [18/Oct/2017:07:08:54 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.44 - - [18/Oct/2017:07:58:35 +0000] "POST /devicetoken HTTP/1.1" 200 0 "-" "B4i%20Example/1.0.0 CFNetwork/887 Darwin/17.0.0"
-192.168.1.32 - - [18/Oct/2017:07:58:59 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.44 - - [18/Oct/2017:08:04:50 +0000] "POST /devicetoken HTTP/1.1" 200 0 "-" "B4i%20Example/1.0.0 CFNetwork/887 Darwin/17.0.0"
-192.168.1.32 - - [18/Oct/2017:08:05:02 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
-192.168.1.32 - - [18/Oct/2017:08:28:21 +0000] "GET /send?password=123&text=Message HTTP/1.1" 200 28 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
