@@ -27,12 +27,14 @@ Sub Handle(req As ServletRequest, resp As ServletResponse)
 	m.Sound = True
 	m.HighPriority = True
 	m.ExpirationDate = DateTime.Now + DateTime.TicksPerDay
+	m.userID  = req.GetParameter("userid")
+	m.userName  = req.GetParameter("username")
 	
-	Dim userID As String = req.GetParameter("userid")
-	Dim userName As String = req.GetParameter("username")
+	'Dim userID As String = req.GetParameter("userid")
+	'Dim userName As String = req.GetParameter("username")
 	Dim rows As List = DBUtils.ExecuteMemoryTable(Main.db, _
 		"SELECT token, type, userid, username FROM tokens WHERE updated_time > ? and userid=? and username=? ORDER BY updated_time DESC", _
-		Array As String (DateTime.Now - DAYS_LIMIT * DateTime.TicksPerDay, userID, userName), 0)
+		Array As String (DateTime.Now - DAYS_LIMIT * DateTime.TicksPerDay, m.userID, m.userName), 0)
 		
 	Dim iosTokens, AndroidTokens As List
 	iosTokens.Initialize

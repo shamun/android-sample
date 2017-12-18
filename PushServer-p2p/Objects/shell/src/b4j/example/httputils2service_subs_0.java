@@ -8,7 +8,7 @@ public class httputils2service_subs_0 {
 
 public static RemoteObject  _completejob(RemoteObject _taskid,RemoteObject _success,RemoteObject _errormessage) throws Exception{
 try {
-		Debug.PushSubsStack("CompleteJob (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,49);
+		Debug.PushSubsStack("CompleteJob (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,49);
 if (RapidSub.canDelegate("completejob")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","completejob", _taskid, _success, _errormessage);
 RemoteObject _job = RemoteObject.declareNull("b4j.example.httpjob");
 Debug.locals.put("TaskId", _taskid);
@@ -43,7 +43,7 @@ finally {
 		}}
 public static RemoteObject  _hc_responseerror(RemoteObject _response,RemoteObject _reason,RemoteObject _statuscode,RemoteObject _taskid) throws Exception{
 try {
-		Debug.PushSubsStack("hc_ResponseError (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,41);
+		Debug.PushSubsStack("hc_ResponseError (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,41);
 if (RapidSub.canDelegate("hc_responseerror")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","hc_responseerror", _response, _reason, _statuscode, _taskid);
 Debug.locals.put("Response", _response);
 Debug.locals.put("Reason", _reason);
@@ -76,7 +76,7 @@ finally {
 		}}
 public static RemoteObject  _hc_responsesuccess(RemoteObject _response,RemoteObject _taskid) throws Exception{
 try {
-		Debug.PushSubsStack("hc_ResponseSuccess (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,28);
+		Debug.PushSubsStack("hc_ResponseSuccess (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,28);
 if (RapidSub.canDelegate("hc_responsesuccess")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","hc_responsesuccess", _response, _taskid);
 Debug.locals.put("Response", _response);
 Debug.locals.put("TaskId", _taskid);
@@ -97,7 +97,7 @@ finally {
 		}}
 public static RemoteObject  _initialize() throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,9);
+		Debug.PushSubsStack("Initialize (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,9);
 if (RapidSub.canDelegate("initialize")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","initialize");
  BA.debugLineNum = 9;BA.debugLine="Sub Initialize";
 Debug.ShouldStop(256);
@@ -139,7 +139,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _response_streamfinish(RemoteObject _success,RemoteObject _taskid) throws Exception{
 try {
-		Debug.PushSubsStack("Response_StreamFinish (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,33);
+		Debug.PushSubsStack("Response_StreamFinish (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,33);
 if (RapidSub.canDelegate("response_streamfinish")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","response_streamfinish", _success, _taskid);
 Debug.locals.put("Success", _success);
 Debug.locals.put("TaskId", _taskid);
@@ -168,7 +168,7 @@ finally {
 		}}
 public static RemoteObject  _submitjob(RemoteObject _job) throws Exception{
 try {
-		Debug.PushSubsStack("SubmitJob (httputils2service) ","httputils2service",7,httputils2service.ba,httputils2service.mostCurrent,17);
+		Debug.PushSubsStack("SubmitJob (httputils2service) ","httputils2service",9,httputils2service.ba,httputils2service.mostCurrent,17);
 if (RapidSub.canDelegate("submitjob")) return b4j.example.httputils2service.remoteMe.runUserSub(false, "httputils2service","submitjob", _job);
 Debug.locals.put("job", _job);
  BA.debugLineNum = 17;BA.debugLine="Public Sub SubmitJob(job As HttpJob) As Int";

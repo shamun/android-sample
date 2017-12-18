@@ -56,11 +56,11 @@ public boolean isSingleton() {
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _bc = RemoteObject.declareNull("anywheresoftware.b4a.agraham.byteconverter.ByteConverter");
 public static b4j.example.main _main = null;
-public static b4j.example.dbutils _dbutils = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
+public static b4j.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"AndroidPush",Debug.moduleToString(b4j.example.androidpush.class),"bc",webutils._bc,"DBUtils",Debug.moduleToString(b4j.example.dbutils.class),"HttpUtils2Service",Debug.moduleToString(b4j.example.httputils2service.class),"iOSFeedback",Debug.moduleToString(b4j.example.iosfeedback.class),"iOSPush",Debug.moduleToString(b4j.example.iospush.class),"Main",Debug.moduleToString(b4j.example.main.class)};
 }

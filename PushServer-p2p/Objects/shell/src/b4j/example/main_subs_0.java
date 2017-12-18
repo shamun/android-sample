@@ -120,22 +120,22 @@ public static void initializeProcessGlobals() {
 	    main.processGlobalsRun = true;
 		try {
 		        main_subs_0._process_globals();
-dbutils_subs_0._process_globals();
-iosfeedback_subs_0._process_globals();
 iospush_subs_0._process_globals();
-httputils2service_subs_0._process_globals();
+iosfeedback_subs_0._process_globals();
 webutils_subs_0._process_globals();
 androidpush_subs_0._process_globals();
+dbutils_subs_0._process_globals();
+httputils2service_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("b4j.example.main");
 send.myClass = BA.getDeviceClass ("b4j.example.send");
 devicetoken.myClass = BA.getDeviceClass ("b4j.example.devicetoken");
-dbutils.myClass = BA.getDeviceClass ("b4j.example.dbutils");
-iosfeedback.myClass = BA.getDeviceClass ("b4j.example.iosfeedback");
 iospush.myClass = BA.getDeviceClass ("b4j.example.iospush");
-httpjob.myClass = BA.getDeviceClass ("b4j.example.httpjob");
-httputils2service.myClass = BA.getDeviceClass ("b4j.example.httputils2service");
+iosfeedback.myClass = BA.getDeviceClass ("b4j.example.iosfeedback");
 webutils.myClass = BA.getDeviceClass ("b4j.example.webutils");
 androidpush.myClass = BA.getDeviceClass ("b4j.example.androidpush");
+dbutils.myClass = BA.getDeviceClass ("b4j.example.dbutils");
+httpjob.myClass = BA.getDeviceClass ("b4j.example.httpjob");
+httputils2service.myClass = BA.getDeviceClass ("b4j.example.httputils2service");
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);

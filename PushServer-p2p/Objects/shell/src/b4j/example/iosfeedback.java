@@ -60,11 +60,11 @@ public static RemoteObject _bc = RemoteObject.declareNull("anywheresoftware.b4a.
 public static RemoteObject _timer1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.Timer");
 public static RemoteObject _buffer = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 public static b4j.example.main _main = null;
-public static b4j.example.dbutils _dbutils = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
+public static b4j.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"AndroidPush",Debug.moduleToString(b4j.example.androidpush.class),"astream",iosfeedback._astream,"bc",iosfeedback._bc,"buffer",iosfeedback._buffer,"DBUtils",Debug.moduleToString(b4j.example.dbutils.class),"HttpUtils2Service",Debug.moduleToString(b4j.example.httputils2service.class),"iOSPush",Debug.moduleToString(b4j.example.iospush.class),"Main",Debug.moduleToString(b4j.example.main.class),"sock",iosfeedback._sock,"timer1",iosfeedback._timer1,"WebUtils",Debug.moduleToString(b4j.example.webutils.class)};
 }

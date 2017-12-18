@@ -60,12 +60,12 @@ public static RemoteObject _type_android = RemoteObject.createImmutable(0);
 public static RemoteObject _srvr = RemoteObject.declareNull("anywheresoftware.b4j.object.ServerWrapper");
 public static RemoteObject _config = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 public static RemoteObject _version = RemoteObject.createImmutable("");
-public static b4j.example.dbutils _dbutils = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
+public static b4j.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"AndroidPush",Debug.moduleToString(b4j.example.androidpush.class),"config",main._config,"db",main._db,"DBUtils",Debug.moduleToString(b4j.example.dbutils.class),"HttpUtils2Service",Debug.moduleToString(b4j.example.httputils2service.class),"iOSFeedback",Debug.moduleToString(b4j.example.iosfeedback.class),"iOSPush",Debug.moduleToString(b4j.example.iospush.class),"srvr",main._srvr,"TYPE_ANDROID",main._type_android,"TYPE_IOS",main._type_ios,"version",main._version,"WebUtils",Debug.moduleToString(b4j.example.webutils.class)};
 }

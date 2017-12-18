@@ -54,12 +54,12 @@ public static int _type_android = 0;
 public static anywheresoftware.b4j.object.ServerWrapper _srvr = null;
 public static anywheresoftware.b4a.objects.collections.Map _config = null;
 public static String _version = "";
-public static b4j.example.dbutils _dbutils = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
+public static b4j.example.httputils2service _httputils2service = null;
 public static String  _appstart(String[] _args) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(ba, "appstart"))
@@ -125,30 +125,30 @@ public static String  _initdb() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(ba, "initdb"))
 	return (String) Debug.delegate(ba, "initdb", null);
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Private Sub InitDB";
-RDebugUtils.currentLine=196609;
- //BA.debugLineNum = 196609;BA.debugLine="If File.Exists(File.DirApp, \"push.db\") = False Th";
+RDebugUtils.currentLine=393216;
+ //BA.debugLineNum = 393216;BA.debugLine="Private Sub InitDB";
+RDebugUtils.currentLine=393217;
+ //BA.debugLineNum = 393217;BA.debugLine="If File.Exists(File.DirApp, \"push.db\") = False Th";
 if (anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db")==anywheresoftware.b4a.keywords.Common.False) { 
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="Log(\"Creating new database.\")";
+RDebugUtils.currentLine=393218;
+ //BA.debugLineNum = 393218;BA.debugLine="Log(\"Creating new database.\")";
 anywheresoftware.b4a.keywords.Common.Log("Creating new database.");
-RDebugUtils.currentLine=196611;
- //BA.debugLineNum = 196611;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
+RDebugUtils.currentLine=393219;
+ //BA.debugLineNum = 393219;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
 _db.InitializeSQLite(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db",anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=196612;
- //BA.debugLineNum = 196612;BA.debugLine="db.ExecNonQuery(\"PRAGMA journal_mode = wal\")";
+RDebugUtils.currentLine=393220;
+ //BA.debugLineNum = 393220;BA.debugLine="db.ExecNonQuery(\"PRAGMA journal_mode = wal\")";
 _db.ExecNonQuery("PRAGMA journal_mode = wal");
-RDebugUtils.currentLine=196613;
- //BA.debugLineNum = 196613;BA.debugLine="DBUtils.CreateTable(db, \"tokens\", _ 			CreateMap";
+RDebugUtils.currentLine=393221;
+ //BA.debugLineNum = 393221;BA.debugLine="DBUtils.CreateTable(db, \"tokens\", _ 			CreateMap";
 _dbutils._createtable(_db,"tokens",anywheresoftware.b4a.keywords.Common.createMap(new Object[] {(Object)("token"),(Object)(_dbutils._db_text),(Object)("type"),(Object)(_dbutils._db_integer),(Object)("updated_time"),(Object)(_dbutils._db_integer),(Object)("userid"),(Object)(_dbutils._db_text),(Object)("username"),(Object)(_dbutils._db_text)}),"token");
  }else {
-RDebugUtils.currentLine=196622;
- //BA.debugLineNum = 196622;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
+RDebugUtils.currentLine=393230;
+ //BA.debugLineNum = 393230;BA.debugLine="db.InitializeSQLite(File.DirApp, \"push.db\", True";
 _db.InitializeSQLite(anywheresoftware.b4a.keywords.Common.File.getDirApp(),"push.db",anywheresoftware.b4a.keywords.Common.True);
  };
-RDebugUtils.currentLine=196624;
- //BA.debugLineNum = 196624;BA.debugLine="End Sub";
+RDebugUtils.currentLine=393232;
+ //BA.debugLineNum = 393232;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -12,12 +12,12 @@ public class devicetoken {
 
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static b4j.example.main _main = null;
-public static b4j.example.dbutils _dbutils = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
+public static b4j.example.httputils2service _httputils2service = null;
 public static Object[] GetGlobals(RemoteObject _ref) throws Exception {
 		return new Object[] {};
 }

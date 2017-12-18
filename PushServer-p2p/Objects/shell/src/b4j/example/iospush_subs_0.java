@@ -8,7 +8,7 @@ public class iospush_subs_0 {
 
 public static RemoteObject  _astream_error() throws Exception{
 try {
-		Debug.PushSubsStack("astream_Error (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,54);
+		Debug.PushSubsStack("astream_Error (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,54);
 if (RapidSub.canDelegate("astream_error")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","astream_error");
  BA.debugLineNum = 54;BA.debugLine="Private Sub astream_Error";
 Debug.ShouldStop(2097152);
@@ -30,7 +30,7 @@ finally {
 		}}
 public static RemoteObject  _astream_newdata(RemoteObject _buffer) throws Exception{
 try {
-		Debug.PushSubsStack("astream_NewData (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,47);
+		Debug.PushSubsStack("astream_NewData (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,47);
 if (RapidSub.canDelegate("astream_newdata")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","astream_newdata", _buffer);
 Debug.locals.put("Buffer", _buffer);
  BA.debugLineNum = 47;BA.debugLine="Private Sub astream_NewData (Buffer() As Byte)";
@@ -58,7 +58,7 @@ finally {
 		}}
 public static RemoteObject  _astream_terminated() throws Exception{
 try {
-		Debug.PushSubsStack("astream_Terminated (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,58);
+		Debug.PushSubsStack("astream_Terminated (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,58);
 if (RapidSub.canDelegate("astream_terminated")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","astream_terminated");
  BA.debugLineNum = 58;BA.debugLine="Private Sub astream_Terminated";
 Debug.ShouldStop(33554432);
@@ -80,7 +80,7 @@ finally {
 		}}
 public static RemoteObject  _connect() throws Exception{
 try {
-		Debug.PushSubsStack("Connect (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,20);
+		Debug.PushSubsStack("Connect (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,20);
 if (RapidSub.canDelegate("connect")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","connect");
  BA.debugLineNum = 20;BA.debugLine="Private Sub Connect";
 Debug.ShouldStop(524288);
@@ -124,7 +124,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _reconnect() throws Exception{
 try {
-		Debug.PushSubsStack("Reconnect (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,38);
+		Debug.PushSubsStack("Reconnect (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,38);
 if (RapidSub.canDelegate("reconnect")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","reconnect");
  BA.debugLineNum = 38;BA.debugLine="Private Sub Reconnect";
 Debug.ShouldStop(32);
@@ -146,7 +146,7 @@ finally {
 		}}
 public static RemoteObject  _sendmessageto(RemoteObject _devices,RemoteObject _msg) throws Exception{
 try {
-		Debug.PushSubsStack("SendMessageTo (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,63);
+		Debug.PushSubsStack("SendMessageTo (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,63);
 if (RapidSub.canDelegate("sendmessageto")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","sendmessageto", _devices, _msg);
 RemoteObject _out = RemoteObject.declareNull("anywheresoftware.b4a.objects.streams.File.OutputStreamWrapper");
 RemoteObject _device = RemoteObject.createImmutable("");
@@ -252,7 +252,7 @@ finally {
 		}}
 public static RemoteObject  _sock_connected(RemoteObject _successful) throws Exception{
 try {
-		Debug.PushSubsStack("sock_Connected (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,27);
+		Debug.PushSubsStack("sock_Connected (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,27);
 if (RapidSub.canDelegate("sock_connected")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","sock_connected", _successful);
 Debug.locals.put("Successful", _successful);
  BA.debugLineNum = 27;BA.debugLine="Private Sub sock_Connected (Successful As Boolean)";
@@ -293,7 +293,7 @@ finally {
 		}}
 public static RemoteObject  _start() throws Exception{
 try {
-		Debug.PushSubsStack("Start (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,14);
+		Debug.PushSubsStack("Start (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,14);
 if (RapidSub.canDelegate("start")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","start");
  BA.debugLineNum = 14;BA.debugLine="Public Sub Start";
 Debug.ShouldStop(8192);
@@ -318,7 +318,7 @@ finally {
 		}}
 public static RemoteObject  _timer1_tick() throws Exception{
 try {
-		Debug.PushSubsStack("Timer1_Tick (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,42);
+		Debug.PushSubsStack("Timer1_Tick (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,42);
 if (RapidSub.canDelegate("timer1_tick")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","timer1_tick");
  BA.debugLineNum = 42;BA.debugLine="Private Sub Timer1_Tick";
 Debug.ShouldStop(512);
@@ -340,7 +340,7 @@ finally {
 		}}
 public static RemoteObject  _writeitem(RemoteObject _out,RemoteObject _id,RemoteObject _data) throws Exception{
 try {
-		Debug.PushSubsStack("WriteItem (iospush) ","iospush",5,iospush.ba,iospush.mostCurrent,95);
+		Debug.PushSubsStack("WriteItem (iospush) ","iospush",3,iospush.ba,iospush.mostCurrent,95);
 if (RapidSub.canDelegate("writeitem")) return b4j.example.iospush.remoteMe.runUserSub(false, "iospush","writeitem", _out, _id, _data);
 Debug.locals.put("out", _out);
 Debug.locals.put("id", _id);

@@ -60,11 +60,11 @@ public static RemoteObject _db_blob = RemoteObject.createImmutable("");
 public static RemoteObject _db_text = RemoteObject.createImmutable("");
 public static RemoteObject _htmlcss = RemoteObject.createImmutable("");
 public static b4j.example.main _main = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
-public static b4j.example.httputils2service _httputils2service = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
 		return new Object[] {"AndroidPush",Debug.moduleToString(b4j.example.androidpush.class),"DB_BLOB",dbutils._db_blob,"DB_INTEGER",dbutils._db_integer,"DB_REAL",dbutils._db_real,"DB_TEXT",dbutils._db_text,"HtmlCSS",dbutils._htmlcss,"HttpUtils2Service",Debug.moduleToString(b4j.example.httputils2service.class),"iOSFeedback",Debug.moduleToString(b4j.example.iosfeedback.class),"iOSPush",Debug.moduleToString(b4j.example.iospush.class),"Main",Debug.moduleToString(b4j.example.main.class),"WebUtils",Debug.moduleToString(b4j.example.webutils.class)};
 }

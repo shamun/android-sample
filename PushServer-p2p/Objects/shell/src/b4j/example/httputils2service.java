@@ -59,11 +59,11 @@ public static RemoteObject _taskidtojob = RemoteObject.declareNull("anywheresoft
 public static RemoteObject _tempfolder = RemoteObject.createImmutable("");
 public static RemoteObject _taskcounter = RemoteObject.createImmutable(0);
 public static b4j.example.main _main = null;
-public static b4j.example.dbutils _dbutils = null;
-public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.iospush _iospush = null;
+public static b4j.example.iosfeedback _iosfeedback = null;
 public static b4j.example.webutils _webutils = null;
 public static b4j.example.androidpush _androidpush = null;
+public static b4j.example.dbutils _dbutils = null;
   public Object[] GetGlobals() {
 		return new Object[] {"AndroidPush",Debug.moduleToString(b4j.example.androidpush.class),"DBUtils",Debug.moduleToString(b4j.example.dbutils.class),"hc",httputils2service._hc,"iOSFeedback",Debug.moduleToString(b4j.example.iosfeedback.class),"iOSPush",Debug.moduleToString(b4j.example.iospush.class),"Main",Debug.moduleToString(b4j.example.main.class),"taskCounter",httputils2service._taskcounter,"TaskIdToJob",httputils2service._taskidtojob,"TempFolder",httputils2service._tempfolder,"WebUtils",Debug.moduleToString(b4j.example.webutils.class)};
 }

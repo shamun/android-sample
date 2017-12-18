@@ -8,7 +8,7 @@ public class dbutils_subs_0 {
 
 public static RemoteObject  _createtable(RemoteObject _sql,RemoteObject _tablename,RemoteObject _fieldsandtypes,RemoteObject _primarykey) throws Exception{
 try {
-		Debug.PushSubsStack("CreateTable (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,23);
+		Debug.PushSubsStack("CreateTable (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,23);
 if (RapidSub.canDelegate("createtable")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","createtable", _sql, _tablename, _fieldsandtypes, _primarykey);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 int _i = 0;
@@ -89,7 +89,7 @@ finally {
 		}}
 public static RemoteObject  _deleterecord(RemoteObject _sql,RemoteObject _tablename,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("DeleteRecord (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,318);
+		Debug.PushSubsStack("DeleteRecord (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,318);
 if (RapidSub.canDelegate("deleterecord")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","deleterecord", _sql, _tablename, _wherefieldequals);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _args = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -160,7 +160,7 @@ finally {
 		}}
 public static RemoteObject  _droptable(RemoteObject _sql,RemoteObject _tablename) throws Exception{
 try {
-		Debug.PushSubsStack("DropTable (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,43);
+		Debug.PushSubsStack("DropTable (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,43);
 if (RapidSub.canDelegate("droptable")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","droptable", _sql, _tablename);
 RemoteObject _query = RemoteObject.createImmutable("");
 Debug.locals.put("SQL", _sql);
@@ -191,7 +191,7 @@ finally {
 		}}
 public static RemoteObject  _escapefield(RemoteObject _f) throws Exception{
 try {
-		Debug.PushSubsStack("EscapeField (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,15);
+		Debug.PushSubsStack("EscapeField (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,15);
 if (RapidSub.canDelegate("escapefield")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","escapefield", _f);
 Debug.locals.put("f", _f);
  BA.debugLineNum = 15;BA.debugLine="Private Sub EscapeField(f As String) As String";
@@ -211,7 +211,7 @@ finally {
 		}}
 public static RemoteObject  _executehtml(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteHtml (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,271);
+		Debug.PushSubsStack("ExecuteHtml (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,271);
 if (RapidSub.canDelegate("executehtml")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executehtml", _sql, _query, _stringargs, _limit);
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
@@ -341,7 +341,7 @@ finally {
 		}}
 public static RemoteObject  _executejson(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _dbtypes) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteJSON (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,231);
+		Debug.PushSubsStack("ExecuteJSON (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,231);
 if (RapidSub.canDelegate("executejson")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executejson", _sql, _query, _stringargs, _limit, _dbtypes);
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
@@ -462,7 +462,7 @@ finally {
 		}}
 public static RemoteObject  _executelist(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit,RemoteObject _list1) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteList (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,213);
+		Debug.PushSubsStack("ExecuteList (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,213);
 if (RapidSub.canDelegate("executelist")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executelist", _sql, _query, _stringargs, _limit, _list1);
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _cols = null;
@@ -519,7 +519,7 @@ finally {
 		}}
 public static RemoteObject  _executemap(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteMap (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,191);
+		Debug.PushSubsStack("ExecuteMap (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,191);
 if (RapidSub.canDelegate("executemap")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executemap", _sql, _query, _stringargs);
 RemoteObject _res = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
@@ -591,7 +591,7 @@ finally {
 		}}
 public static RemoteObject  _executememorytable(RemoteObject _sql,RemoteObject _query,RemoteObject _stringargs,RemoteObject _limit) throws Exception{
 try {
-		Debug.PushSubsStack("ExecuteMemoryTable (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,166);
+		Debug.PushSubsStack("ExecuteMemoryTable (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,166);
 if (RapidSub.canDelegate("executememorytable")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","executememorytable", _sql, _query, _stringargs, _limit);
 RemoteObject _cur = RemoteObject.declareNull("anywheresoftware.b4j.objects.SQL.ResultSetWrapper");
 RemoteObject _table = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -668,7 +668,7 @@ finally {
 		}}
 public static RemoteObject  _filltable(RemoteObject _ws,RemoteObject _jq,RemoteObject _rs) throws Exception{
 try {
-		Debug.PushSubsStack("FillTable (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,338);
+		Debug.PushSubsStack("FillTable (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,338);
 if (RapidSub.canDelegate("filltable")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","filltable", _ws, _jq, _rs);
 RemoteObject _data = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
 RemoteObject _row = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -737,7 +737,7 @@ finally {
 		}}
 public static RemoteObject  _insertmaps(RemoteObject _sql,RemoteObject _tablename,RemoteObject _listofmaps) throws Exception{
 try {
-		Debug.PushSubsStack("InsertMaps (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,55);
+		Debug.PushSubsStack("InsertMaps (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,55);
 if (RapidSub.canDelegate("insertmaps")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","insertmaps", _sql, _tablename, _listofmaps);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _columns = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
@@ -910,7 +910,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _updaterecord(RemoteObject _sql,RemoteObject _tablename,RemoteObject _field,RemoteObject _newvalue,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("UpdateRecord (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,103);
+		Debug.PushSubsStack("UpdateRecord (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,103);
 if (RapidSub.canDelegate("updaterecord")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","updaterecord", _sql, _tablename, _field, _newvalue, _wherefieldequals);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _args = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");
@@ -986,7 +986,7 @@ finally {
 		}}
 public static RemoteObject  _updaterecord2(RemoteObject _sql,RemoteObject _tablename,RemoteObject _fields,RemoteObject _wherefieldequals) throws Exception{
 try {
-		Debug.PushSubsStack("UpdateRecord2 (dbutils) ","dbutils",3,dbutils.ba,dbutils.mostCurrent,127);
+		Debug.PushSubsStack("UpdateRecord2 (dbutils) ","dbutils",7,dbutils.ba,dbutils.mostCurrent,127);
 if (RapidSub.canDelegate("updaterecord2")) return b4j.example.dbutils.remoteMe.runUserSub(false, "dbutils","updaterecord2", _sql, _tablename, _fields, _wherefieldequals);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _args = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.List");

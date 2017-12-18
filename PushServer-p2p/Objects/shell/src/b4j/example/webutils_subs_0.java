@@ -8,7 +8,7 @@ public class webutils_subs_0 {
 
 public static RemoteObject  _escapehtml(RemoteObject _raw) throws Exception{
 try {
-		Debug.PushSubsStack("EscapeHtml (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,10);
+		Debug.PushSubsStack("EscapeHtml (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,10);
 if (RapidSub.canDelegate("escapehtml")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","escapehtml", _raw);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 int _i = 0;
@@ -86,7 +86,7 @@ finally {
 		}}
 public static RemoteObject  _init() throws Exception{
 try {
-		Debug.PushSubsStack("init (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,6);
+		Debug.PushSubsStack("init (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,6);
 if (RapidSub.canDelegate("init")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","init");
  BA.debugLineNum = 6;BA.debugLine="Public Sub init";
 Debug.ShouldStop(32);
@@ -112,7 +112,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _readbytesfromstream(RemoteObject _in,RemoteObject _length) throws Exception{
 try {
-		Debug.PushSubsStack("ReadBytesFromStream (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,65);
+		Debug.PushSubsStack("ReadBytesFromStream (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,65);
 if (RapidSub.canDelegate("readbytesfromstream")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","readbytesfromstream", _in, _length);
 RemoteObject _b = null;
 RemoteObject _count = RemoteObject.createImmutable(0);
@@ -173,7 +173,7 @@ finally {
 		}}
 public static RemoteObject  _readstring(RemoteObject _in) throws Exception{
 try {
-		Debug.PushSubsStack("ReadString (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,58);
+		Debug.PushSubsStack("ReadString (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,58);
 if (RapidSub.canDelegate("readstring")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","readstring", _in);
 RemoteObject _len = RemoteObject.createImmutable(0);
 Debug.locals.put("In", _in);
@@ -197,7 +197,7 @@ finally {
 		}}
 public static RemoteObject  _redirectto(RemoteObject _ws,RemoteObject _targeturl) throws Exception{
 try {
-		Debug.PushSubsStack("RedirectTo (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,55);
+		Debug.PushSubsStack("RedirectTo (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,55);
 if (RapidSub.canDelegate("redirectto")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","redirectto", _ws, _targeturl);
 Debug.locals.put("ws", _ws);
 Debug.locals.put("TargetUrl", _targeturl);
@@ -218,7 +218,7 @@ finally {
 		}}
 public static RemoteObject  _replacemap(RemoteObject _base,RemoteObject _replacements) throws Exception{
 try {
-		Debug.PushSubsStack("ReplaceMap (webutils) ","webutils",8,webutils.ba,webutils.mostCurrent,33);
+		Debug.PushSubsStack("ReplaceMap (webutils) ","webutils",5,webutils.ba,webutils.mostCurrent,33);
 if (RapidSub.canDelegate("replacemap")) return b4j.example.webutils.remoteMe.runUserSub(false, "webutils","replacemap", _base, _replacements);
 RemoteObject _pattern = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _k = RemoteObject.createImmutable("");

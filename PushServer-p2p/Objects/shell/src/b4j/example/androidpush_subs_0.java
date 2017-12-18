@@ -8,7 +8,7 @@ public class androidpush_subs_0 {
 
 public static RemoteObject  _jobdone(RemoteObject _j) throws Exception{
 try {
-		Debug.PushSubsStack("JobDone (androidpush) ","androidpush",9,androidpush.ba,androidpush.mostCurrent,25);
+		Debug.PushSubsStack("JobDone (androidpush) ","androidpush",6,androidpush.ba,androidpush.mostCurrent,25);
 if (RapidSub.canDelegate("jobdone")) return b4j.example.androidpush.remoteMe.runUserSub(false, "androidpush","jobdone", _j);
 Debug.locals.put("j", _j);
  BA.debugLineNum = 25;BA.debugLine="Private Sub JobDone(j As HttpJob)";
@@ -44,7 +44,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _sendmessageto(RemoteObject _devices,RemoteObject _msg) throws Exception{
 try {
-		Debug.PushSubsStack("SendMessageTo (androidpush) ","androidpush",9,androidpush.ba,androidpush.mostCurrent,6);
+		Debug.PushSubsStack("SendMessageTo (androidpush) ","androidpush",6,androidpush.ba,androidpush.mostCurrent,6);
 if (RapidSub.canDelegate("sendmessageto")) return b4j.example.androidpush.remoteMe.runUserSub(false, "androidpush","sendmessageto", _devices, _msg);
 RemoteObject _json = RemoteObject.declareNull("anywheresoftware.b4j.objects.collections.JSONParser.JSONGenerator");
 RemoteObject _m = RemoteObject.declareNull("anywheresoftware.b4a.objects.collections.Map");

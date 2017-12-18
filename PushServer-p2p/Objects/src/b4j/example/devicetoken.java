@@ -32,12 +32,12 @@ public class devicetoken extends B4AClass.ImplB4AClass implements BA.SubDelegato
     }
 public anywheresoftware.b4a.keywords.Common __c = null;
 public b4j.example.main _main = null;
-public b4j.example.dbutils _dbutils = null;
-public b4j.example.iosfeedback _iosfeedback = null;
 public b4j.example.iospush _iospush = null;
-public b4j.example.httputils2service _httputils2service = null;
+public b4j.example.iosfeedback _iosfeedback = null;
 public b4j.example.webutils _webutils = null;
 public b4j.example.androidpush _androidpush = null;
+public b4j.example.dbutils _dbutils = null;
+public b4j.example.httputils2service _httputils2service = null;
 public String  _class_globals(b4j.example.devicetoken __ref) throws Exception{
 __ref = this;
 RDebugUtils.currentModule="devicetoken";
